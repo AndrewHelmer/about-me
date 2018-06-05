@@ -29,7 +29,16 @@ console.log (userName + 's answer was ' + sports);
 
 var noob = prompt('Am I completely new to coding ' + userName + '?');
 if (noob === 'yes') {
-  alert('You are correct ' + userName + ' ,but I\'m looking to get better.');
+  alert('You are correct ' + userName + ' , but I\'m looking to get better.');
 } else {
-  alert('Thanks for believing in me ' + userName + ', but I\'m actually new. I\'m looking to get better though!.');
+  alert('Thanks for believing in me ' + userName + ', but I\'m actually new. I\'m looking to get better though!');
 }
+console.log(userName + '\'s answer was ' + noob);
+
+var doYouLikeMe = prompt(userName +' since you\'ve learned about me. Do you think you like me ' + userName + '?');
+if(doYouLikeMe === 'yes'){
+  alert('WOOHOO you\'re awesome ' + userName + '!');
+} else {
+  alert('Well thanks ' + userName + ' you just ruined my day.');
+}
+console.log(userName + '\'s answer was ' + doYouLikeMe +'.');
