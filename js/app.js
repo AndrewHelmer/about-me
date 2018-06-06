@@ -9,7 +9,7 @@ if (intro === 'yes') {
 } else {
   alert('Well that isn\'t very nice ' + userName + ', but ' + userName + ' you\'re going to have to play!');
 }
-console.log(userName + '\'s answer was ' + intro);
+console.log(userName + '\'s answer was ' + intro + ' to intro.');
 
 var amIAPro = prompt('Am I the best coder in the world ' + userName + '?').toLowerCase();
 if (amIAPro === 'yes') {
@@ -17,7 +17,7 @@ if (amIAPro === 'yes') {
 } else {
   alert('Well sadly you\'re correct here.');
 }
-console.log(userName + '\'s answer was ' + amIAPro);
+console.log(userName + '\'s answer was ' + amIAPro + ' to amIAPRO.');
 
 var sports = prompt('Am I interested in sports ' + userName + '?').toLowerCase();
 if (sports === 'yes'){
@@ -25,7 +25,7 @@ if (sports === 'yes'){
 } else {
   alert('I can\'t believe you don\'t think I like sports ' + userName);
 }
-console.log (userName + '\'s answer was ' + sports);
+console.log (userName + '\'s answer was ' + sports + ' to sports.');
 
 var noob = prompt('Am I completely new to coding ' + userName + '?').toLowerCase();
 if (noob === 'yes') {
@@ -33,7 +33,7 @@ if (noob === 'yes') {
 } else {
   alert('Thanks for believing in me ' + userName + ', but I\'m actually new. I\'m looking to get better though!');
 }
-console.log(userName + '\'s answer was ' + noob);
+console.log(userName + '\'s answer was ' + noob + ' to noob.');
 
 var doYouLikeMe = prompt(userName +' since you\'ve learned about me. Do you think you like me ' + userName + '?').toLowerCase();
 if(doYouLikeMe === 'yes'){
@@ -41,4 +41,4 @@ if(doYouLikeMe === 'yes'){
 } else {
   alert('Well thanks ' + userName + ' you just ruined my day.');
 }
-console.log(userName + '\'s answer was ' + doYouLikeMe +'.');
+console.log(userName + '\'s answer was ' + doYouLikeMe +' to doYouLikeMe.');
