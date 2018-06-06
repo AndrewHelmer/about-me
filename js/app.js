@@ -4,7 +4,7 @@ var score = (0);
 var userName = prompt('Hello there! Can you please give me your name.');
 console.log('the users name is', userName);
 
-var intro = prompt('Hello there ' + userName + '. My name is Andy Helmer. Would you like to play a guessing game about me? Please answer with yes or no. Please keep the answers in lower case.').toLowerCase();
+var intro = prompt('Hello there ' + userName + '. My name is Andy Helmer. Would you like to play a guessing game about me? Please answer with yes or no if asked.Your answer will be assumed as a no if you type anything else.(yes or no)').toLowerCase();
 if (intro === 'yes') {
   alert('Yay lets do this!');
   score++;
@@ -13,7 +13,7 @@ if (intro === 'yes') {
 }
 console.log(userName + '\'s answer was ' + intro + ' to intro.');
 
-var amIAPro = prompt('Am I the best coder in the world ' + userName + '?').toLowerCase();
+var amIAPro = prompt('Am I the best coder in the world ' + userName + '? (yes or no)').toLowerCase();
 if (amIAPro === 'yes') {
   alert('I love the compliment, but I\'m sry ' + userName + ' you are wrong here.');
 } else {
@@ -23,7 +23,7 @@ if (amIAPro === 'yes') {
 console.log(userName + '\'s answer was ' + amIAPro + ' to amIAPRO.');
 
 
-var sports = prompt('Am I interested in sports ' + userName + '?').toLowerCase();
+var sports = prompt('Am I interested in sports ' + userName + '?(yes or no)').toLowerCase();
 if (sports === 'yes'){
   alert('Hooray ' + userName + ' you are right! My favorite team is the New Orleans Saints!');
   score++;
@@ -34,7 +34,7 @@ console.log (userName + '\'s answer was ' + sports + ' to sports.');
 
 
 
-var noob = prompt('Am I completely new to coding ' + userName + '?').toLowerCase();
+var noob = prompt('Am I completely new to coding ' + userName + '?(yes or no)').toLowerCase();
 if (noob === 'yes') {
   alert('You are correct ' + userName + ' , but I\'m looking to get better.');
   score++;
@@ -45,22 +45,25 @@ console.log(userName + '\'s answer was ' + noob + ' to noob.');
 
 
 
-var amITall = prompt(userName +' do you think I\'m tall').toLowerCase();
+var amITall = prompt(userName +' do you think I\'m tall.(yes or no)').toLowerCase();
 if(amITall === 'yes'){
   alert('I wish I was ' + userName + '!');
 } else {
-  alert('You\'re right' + userName + ' I\'m a short person.');
+  alert('You\'re right ' + userName + ' I\'m short.');
+  score++;
 }
 console.log(userName + '\'s answer was ' + amITall +' to amITall.');
 
 
 
 var studentsInClass = 14;
-var guess = prompt('can you guess how many students are in my class?');
+var guess = prompt('can you guess how many students are in my class?(4 guesses)');
 guess = parseInt(guess);
 for (var i=0; i < 4; i++){
+  console.log('guess is referring to the number guesses ' + userName + ' guessed.' + guess);
   if (guess === studentsInClass){
     alert ('you are correct');
+    score++;
     break;
   } else if ( guess < studentsInClass) {
     alert('That is not correct. Your guess was too low :(');
@@ -76,11 +79,12 @@ for (var i=0; i < 4; i++){
 
 
 var favoritePlaces = ['peru','cuba','korea','argentina'];
-var arrayGuess = prompt('Can you guess a country I want to visit?').toLocaleLowerCase();
+var arrayGuess = prompt(userName + ' can you guess a country I want to visit?(6 guesses)').toLocaleLowerCase();
 for ( i=0; i < 6; i++){
-  console.log('arrayGuess is reffering to the countries the user guessed ' + arrayGuess + '.');
+  console.log('arrayGuess is reffering to the countries '+ userName + ' guessed ' + arrayGuess + '.');
   if (favoritePlaces.includes(arrayGuess)){
     alert ('you are correct');
+    score++;
     break;
   } else {
     alert ('that is not correct');
@@ -88,4 +92,5 @@ for ( i=0; i < 6; i++){
   }
 }
 
-alert('You\'re score is ' + score + '.');
+alert(' You\'re score is ' + score + '.');
+console.log(score+ 'is ' + userName + '\'s final score');
