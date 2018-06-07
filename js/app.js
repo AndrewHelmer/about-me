@@ -97,7 +97,7 @@ for ( i=0; i < 6; i++){
   } else {
     alert ('that is not correct');
     badGuess--;
-    arrayGuess = arrayGuess = prompt(userName + ' can you guess a country I want to visit?(' + badGuess + ' guesses)').toLowerCase();
+    arrayGuess = prompt(userName + ' can you guess a country I want to visit?(' + badGuess + ' guesses)').toLowerCase();
   }
 }
 alert('the places I wanted to visit are Peru, Korea, Argentia, and Cuba');
