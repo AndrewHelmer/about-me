@@ -72,9 +72,10 @@ for (var i=0; i < 4; i++){
     break;
   } else if ( guess < studentsInClass) {
     alert('That is not correct. Your guess was too low :(');
+    wrongGuess--;
     guess = prompt('can you guess how many students are in my coding class?( ' + wrongGuess + ' guesses)');
     guess = parseInt(guess);
-    wrongGuess--;
+
   } else {
     alert('That is not correct. That number is too high, or you tried to be goofy and typed something other than a number.');
     wrongGuess--;
