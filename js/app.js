@@ -1,5 +1,8 @@
 'use strict';
 var score = (0);
+var wrongGuess = (4);
+var badGuess = (6);
+var totalAnswers = (7);
 
 var userName = prompt('Hello there! Can you please give me your name.');
 console.log('the users name is', userName);
@@ -56,8 +59,10 @@ console.log(userName + '\'s answer was ' + amITall +' to amITall.');
 
 
 
+
+
 var studentsInClass = 14;
-var guess = prompt('can you guess how many students are in my class?(4 guesses)');
+var guess = prompt('can you guess how many students are in my coding class?( ' + wrongGuess + ' guesses)');
 guess = parseInt(guess);
 for (var i=0; i < 4; i++){
   console.log('guess is referring to the number guesses ' + userName + ' guessed.' + guess);
@@ -67,19 +72,21 @@ for (var i=0; i < 4; i++){
     break;
   } else if ( guess < studentsInClass) {
     alert('That is not correct. Your guess was too low :(');
-    guess = prompt('can you guess how many students are in my class?');
+    guess = prompt('can you guess how many students are in my coding class?( ' + wrongGuess + ' guesses)');
     guess = parseInt(guess);
+    wrongGuess--;
   } else {
     alert('That is not correct. That number is too high, or you tried to be goofy and typed something other than a number.');
-    guess = prompt('can you guess how many students are in my class?');
+    wrongGuess--;
+    guess = prompt('can you guess how many students are in my coding class?( ' + wrongGuess + ' guesses)');
     guess = parseInt(guess);
   }
 }
-
+alert('there are 14 students in my class');
 
 
 var favoritePlaces = ['peru','cuba','korea','argentina'];
-var arrayGuess = prompt(userName + ' can you guess a country I want to visit?(6 guesses)').toLocaleLowerCase();
+var arrayGuess = prompt(userName + ' can you guess a country I want to visit?(' + badGuess + ' guesses)').toLocaleLowerCase();
 for ( i=0; i < 6; i++){
   console.log('arrayGuess is reffering to the countries '+ userName + ' guessed ' + arrayGuess + '.');
   if (favoritePlaces.includes(arrayGuess)){
@@ -88,9 +95,10 @@ for ( i=0; i < 6; i++){
     break;
   } else {
     alert ('that is not correct');
-    arrayGuess = prompt ('Can you guess what countries I want to visit?');
+    badGuess--;
+    arrayGuess = arrayGuess = prompt(userName + ' can you guess a country I want to visit?(' + badGuess + ' guesses)').toLowerCase();
   }
 }
-
-alert(' You\'re score is ' + score + '.');
-console.log(score+ 'is ' + userName + '\'s final score');
+alert('the places I wanted to visit are Peru, Korea, Argentia, and Cuba');
+alert(' You\'re score is ' + score + ' out of ' + totalAnswers);
+console.log(score + 'is ' + userName + '\'s final score');
