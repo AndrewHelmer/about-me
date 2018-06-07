@@ -86,7 +86,7 @@ for (var i=0; i < 4; i++){
 alert('there are 14 students in my class');
 
 
-var favoritePlaces = ['peru','cuba','korea','argentina'];
+var favoritePlaces = ['peru','cuba','new zealand','argentina'];
 var arrayGuess = prompt(userName + ' can you guess a country I want to visit?(' + badGuess + ' guesses)').toLocaleLowerCase();
 for ( i=0; i < 6; i++){
   console.log('arrayGuess is reffering to the countries '+ userName + ' guessed ' + arrayGuess + '.');
