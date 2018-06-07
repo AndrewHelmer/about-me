@@ -37,14 +37,14 @@ console.log (userName + '\'s answer was ' + sports + ' to sports.');
 
 
 
-var noob = prompt('Am I completely new to coding ' + userName + '?(yes or no)').toLowerCase();
-if (noob === 'yes') {
+var newPerson = prompt('Am I completely new to coding ' + userName + '?(yes or no)').toLowerCase();
+if (newPerson === 'yes') {
   alert('You are correct ' + userName + ' , but I\'m looking to get better.');
   score++;
 } else {
-  alert('Thanks for believing in me ' + userName + ', but I\'m actually new. I\'m looking to get better though!');
+  alert( + userName + ' I\'m actually new. I\'m looking to get better though!');
 }
-console.log(userName + '\'s answer was ' + noob + ' to noob.');
+console.log(userName + '\'s answer was ' + newPerson + ' to noob.');
 
 
 
