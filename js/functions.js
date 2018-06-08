@@ -4,7 +4,6 @@ var wrongGuess = (4);
 var badGuess = (6);
 var totalAnswers = (7);
 
-
 function correct() {
   console.log(userName + ' was correct');
   score++;
@@ -29,20 +28,18 @@ console.log(userName + '\'s answer was ' + intro + ' to intro.');
 
 var amIAPro = prompt('Am I the best coder in the world ' + userName + '? (yes or no)').toLowerCase();
 if (amIAPro === 'yes') {
-  alert('I love the compliment, but I\'m sry ' + userName + ' you are wrong here.');
+  incorrect();
 } else {
-  alert('Well sadly you\'re correct here.');
-  score++;
+  correct();
 }
 console.log(userName + '\'s answer was ' + amIAPro + ' to amIAPRO.');
 
 
 var sports = prompt('Am I interested in sports ' + userName + '?(yes or no)').toLowerCase();
 if (sports === 'yes'){
-  alert('Hooray ' + userName + ' you are right! My favorite team is the New Orleans Saints!');
-  score++;
+  correct();
 } else {
-  alert('I can\'t believe you don\'t think I like sports ' + userName);
+  incorrect();
 }
 console.log (userName + '\'s answer was ' + sports + ' to sports.');
 
@@ -50,10 +47,9 @@ console.log (userName + '\'s answer was ' + sports + ' to sports.');
 
 var newPerson = prompt('Am I completely new to coding ' + userName + '?(yes or no)').toLowerCase();
 if (newPerson === 'yes') {
-  alert('You are correct ' + userName + ' , but I\'m looking to get better.');
-  score++;
+  correct();
 } else {
-  alert( + userName + ' I\'m actually new. I\'m looking to get better though!');
+  incorrect();
 }
 console.log(userName + '\'s answer was ' + newPerson + ' to noob.');
 
@@ -61,10 +57,9 @@ console.log(userName + '\'s answer was ' + newPerson + ' to noob.');
 
 var amITall = prompt(userName +' do you think I\'m tall.(yes or no)').toLowerCase();
 if(amITall === 'yes'){
-  alert('I wish I was ' + userName + '!');
+  incorrect();
 } else {
-  alert('You\'re right ' + userName + ' I\'m short.');
-  score++;
+  correct();
 }
 console.log(userName + '\'s answer was ' + amITall +' to amITall.');
 
@@ -78,8 +73,7 @@ guess = parseInt(guess);
 for (var i=0; i < 4; i++){
   console.log('guess is referring to the number guesses ' + userName + ' guessed.' + guess);
   if (guess === studentsInClass){
-    alert ('you are correct');
-    score++;
+    correct();
     break;
   } else if ( guess < studentsInClass) {
     alert('That is not correct. Your guess was too low :(');
