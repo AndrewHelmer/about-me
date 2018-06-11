@@ -1,4 +1,36 @@
-body {background-color:rgb(41, 79, 36);}
-img {
-  height: 500px;
+body {
+ background-color: aquamarine
+}
+header{
+  text-align:center;
+  background-color:green;
+  font-size:50px;
+}
+
+  img.picture {
+      height: 451px;
+      width : 676px;
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+     }
+
+
+ol{
+
+  padding: 8px;
+    margin: 10px;
+    list-style: none;
+}
+ul{
+  padding: 8px;
+    margin: 10px;
+    list-style: none;
+}
+h2{
+  font-size: 30px;
+}
+ol{
+  padding: 8px;
 }
